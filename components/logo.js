@@ -39,10 +39,3 @@ const Logo = () => {
 }
 
 export default Logo
-        </LogoBox>
-      </a>
-    </Link>
-  )
-}
-
-export default Logo
