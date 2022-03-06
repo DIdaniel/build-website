@@ -1,10 +1,17 @@
+import NextLink from 'next/link'
 import {
+  Button,
   Container,
   Box,
   Heading,
   Image,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
@@ -43,6 +50,50 @@ const Page = () => {
           />
         </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>Hello Nice to meet you I am dongil kim</Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works/inkdrop">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1991</BioYear>
+          Born in Deagu, Korea.
+        </BioSection>
+        <BioSection>
+          <BioYear>2010</BioYear>
+          학교를 졸업했다
+        </BioSection>
+        <BioSection>
+          <BioYear>2015</BioYear>
+          학교를 졸업했다
+        </BioSection>
+        <BioSection>
+          <BioYear>2017</BioYear>
+          학교를 졸업했다
+        </BioSection>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ❤
+        </Heading>
+        <Paragraph>
+          Art, Music, Coffee
+          <Link href="https://www.naver.com">Drawing</Link>
+          <Link href="https://www.naver.com">Coding</Link>
+        </Paragraph>
+      </Section>
     </Container>
   )
 }
